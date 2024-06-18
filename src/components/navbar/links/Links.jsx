@@ -7,22 +7,8 @@ import Image from "next/image";
 import { handleLogout } from "@/lib/action";
 
 const links = [
-  {
-    title: "Homepage",
-    path: "/",
-  },
-  {
-    title: "About",
-    path: "/about",
-  },
-  {
-    title: "Contact",
-    path: "/contact",
-  },
-  {
-    title: "Blog",
-    path: "/blog",
-  },
+
+ 
 ];
 
 const Links = ({session}) => {
