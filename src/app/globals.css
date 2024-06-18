@@ -94,14 +94,16 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
+.container{
+  background-color: rebeccapurple;
+  width:1500px;
+  margin: auto;
+  padding-left:50px;
+  padding-right: 50px;
+  min-height:100vh;
+  display:flex;
+  flex-direction: column;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
+
+
