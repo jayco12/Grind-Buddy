@@ -93,6 +93,8 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    padding: 20px;
+    
 }
 .container{
   background-color: rebeccapurple;
