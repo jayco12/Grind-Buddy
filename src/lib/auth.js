@@ -8,24 +8,21 @@ import { authConfig } from "./auth.config";
 
 const login = async (credentials) => {
   try {
-    connectToDb();
+    await connectToDb();
     const user = await User.findOne({ username: credentials.username });
 
-    if (!user) throw new Error("Wrong credentials!");
+    if (!user) throw new Error("User not found");
 
-    const isPasswordCorrect = await bcrypt.compare(
-      credentials.password,
-      user.password
-    );
-
-    if (!isPasswordCorrect) throw new Error("Wrong credentials!");
+    const isPasswordCorrect = await bcrypt.compare(credentials.password, user.password);
+    if (!isPasswordCorrect) throw new Error("Invalid password");
 
     return user;
   } catch (err) {
-    console.log(err);
-    throw new Error("Failed to login!");
+    console.error("Login error:", err);
+    throw new Error("Failed to login");
   }
 };
+
 
 export const {
   handlers: { GET, POST },
@@ -45,10 +42,12 @@ export const {
           const user = await login(credentials);
           return user;
         } catch (err) {
-          return null;
+          console.error("Authorization error:", err);
+          throw new Error("Invalid credentials");
         }
-      },
+      }
     }),
+    
   ],
   callbacks: {
     async signIn({ user, account, profile }) {
