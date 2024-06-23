@@ -1,7 +1,7 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { Post, User } from "./models";
+import {  User } from "./models";
 import { connectToDb } from "./utils";
 import { signIn, signOut } from "./auth";
 import bcrypt from "bcryptjs";
@@ -100,7 +100,7 @@ export const login = async (prevState, formData) => {
     if (err.message.includes("CredentialsSignin")) {
       return { error: "Invalid username or password" };
     }
-
- return { error: "Something wemt wrong" };
+    
+    throw err;
   }
 };
