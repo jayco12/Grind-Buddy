@@ -4,10 +4,15 @@ const userSchema = new mongoose.Schema(
   {
     username: {
       type: String,
-      required: true,
-      unique: true,
-      min: 3,
-      max: 20,
+    },
+    school: {
+      type: String,
+    },
+    hobbies: {
+      type: String,
+    },
+    about: {
+      type: String,
     },
     email: {
       type: String,

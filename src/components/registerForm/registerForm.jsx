@@ -19,7 +19,11 @@ const RegisterForm = () => {
   return (
     <form className={styles.form} action={formAction}>
       <input type="text" placeholder="username" name="username" />
+      <input type="school" placeholder="What School" name="school" />
+      <input type="hobbies" placeholder="hobbies" name="hobbies" />
+      <input type="about" placeholder="Let your buddy get to know you" name="about" />
       <input type="email" placeholder="email" name="email" />
+  
       <input type="password" placeholder="password" name="password" />
       <input
         type="password"

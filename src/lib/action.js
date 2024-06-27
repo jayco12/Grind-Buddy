@@ -5,14 +5,18 @@ import { Post, User } from "./models";
 import { connectToDb } from "./utils";
 import { signIn, signOut } from "./auth";
 import bcrypt from "bcryptjs";
+// import { toast } from 'react-toastify';
 
 export const addUser = async (prevState,formData) => {
-  const { username, email, password, img } = Object.fromEntries(formData);
+  const { username,school, hobbies,about, email, password, img } = Object.fromEntries(formData);
 
   try {
     connectToDb();
     const newUser = new User({
       username,
+      school,
+      hobbies,
+      about,
       email,
       password,
       img,
@@ -53,8 +57,11 @@ export const handleLogout = async () => {
 };
 
 export const register = async (previousState, formData) => {
-  const { username, email, password, img, passwordRepeat } =
-    Object.fromEntries(formData);
+  const formDataObject = Object.fromEntries(formData);
+
+  console.log("Form Data:", formDataObject);
+  const { username,school, hobbies,about, email, password, img, passwordRepeat } =formDataObject;
+
 
   if (password !== passwordRepeat) {
     return { error: "Passwords do not match" };
@@ -74,6 +81,9 @@ export const register = async (previousState, formData) => {
 
     const newUser = new User({
       username,
+      school,
+      hobbies,
+      about, 
       email,
       password: hashedPassword,
       img,
@@ -94,12 +104,13 @@ export const login = async (prevState, formData) => {
 
   try {
     await signIn("credentials", { username, password });
+    // toast.success(`Login successful`);
   } catch (err) {
     console.log(err);
 
     if (err.message.includes("CredentialsSignin")) {
       return { error: "Invalid username or password" };
     }
-    return { error: "Something went wrong" };
+    throw err;
   }
 };

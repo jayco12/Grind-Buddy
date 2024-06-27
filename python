@@ -1,0 +1,130 @@
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+
+# Load data from database
+data = pd.read_csv('user_data.csv')  # Assume you've exported the data to a CSV
+
+# Data preprocessing
+# Example: Assuming we are predicting user engagement based on user data
+features = data.drop('engagement', axis=1)
+target = data['engagement']
+
+# Standardizing the features
+scaler = StandardScaler()
+features_scaled = scaler.fit_transform(features)
+
+# Splitting the data
+X_train, X_test, y_train, y_test = train_test_split(features_scaled, target, test_size=0.2, random_state=42)
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+
+# Define the model
+model = Sequential([
+    Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
+    Dense(64, activation='relu'),
+    Dense(1, activation='sigmoid')  # Assuming binary classification
+])
+
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+# Train the model
+history = model.fit(X_train, y_train, epochs=50, batch_size=32, validation_split=0.2)
+
+# Evaluate the model
+model.evaluate(X_test, y_test)
+
+# Save the model
+model.save('user_engagement_model.h5')
+from fastapi import FastAPI, Request
+import tensorflow as tf
+import numpy as np
+from pydantic import BaseModel
+
+# Load the model
+model = tf.keras.models.load_model('user_engagement_model.h5')
+
+# Initialize FastAPI app
+app = FastAPI()
+
+class UserData(BaseModel):
+    feature1: float
+    feature2: float
+    # Add other features as per your dataset
+
+@app.post("/predict")
+async def predict(data: UserData):
+    input_data = np.array([[data.feature1, data.feature2, ...]])  # Add all features
+    prediction = model.predict(input_data)
+    return {"prediction": prediction[0][0]}
+
+# Run the API with `uvicorn app:app --reload`
+import { useState } from 'react';
+import axios from 'axios';
+
+const Search = () => {
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState([]);
+
+  const handleSearch = async () => {
+    const response = await axios.post('http://localhost:8000/predict', { 
+      feature1: value1,
+      feature2: value2,
+      // Add other features
+    });
+    setResults(response.data.prediction);
+  };
+
+  return (
+    <div>
+      <input
+        type="text"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        placeholder="Search"
+      />
+      <button onClick={handleSearch}>Search</button>
+      <div>
+        {results && <p>Prediction: {results}</p>}
+      </div>
+    </div>
+  );
+};
+
+export default Search;
+
+in pages/visualization.js
+import { useEffect, useState } from 'react';
+import { Bar } from 'react-chartjs-2';
+
+const Visualization = () => {
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get('http://localhost:8000/data');
+      setData(response.data);
+    };
+    fetchData();
+  }, []);
+
+  const chartData = {
+    labels: data.labels,
+    datasets: [
+      {
+        label: 'User Engagement',
+        data: data.values,
+        backgroundColor: 'rgba(75, 192, 192, 0.6)',
+      },
+    ],
+  };
+
+  return (
+    <div>
+      <Bar data={chartData} />
+    </div>
+  );
+};
+
+export default Visualization;

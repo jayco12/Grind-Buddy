@@ -1,12 +1,16 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navbar from '@/components/navbar/Navbar';
+import 'react-toastify/dist/ReactToastify.css';
+import Search from "./search/Search";
+import Navbar from "@/components/navbar/Navbar";
+// import Navbar from "@/components/navbar/Navbar";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Auth app",
-  description: "This is an app thathandles auth",
+  title: "Grind Buddy",
+  description: "Get connected to that study buddy in your school.",
 };
 
 export default function RootLayout({ children }) {
@@ -14,9 +18,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         
-        <Navbar/>
+       {/* <Navbar/> */}
+       <Navbar/>
 
-        {children}</body>
+        {children}
+        </body>
     </html>
   );
 }

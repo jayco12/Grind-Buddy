@@ -1,5 +1,6 @@
 "use client";
 
+import Search from "./search/Search";
 import styles from "./page.module.css";
 const Home=({session}) => {
   return (
@@ -7,15 +8,20 @@ const Home=({session}) => {
       {session?.user ? (
           <>
       <div className={styles.description}>
-       Welcome 👋, try to sign in 
+      Welcome 👋, yay you have literally signed in
+    
       </div>
       </>
       ):(
         <div className={styles.description}>
-        Welcome 👋, yay you have literally signedin 
+           Welcome 👋, lets help you find that Grind buddy 😉
+       
+           
        </div>
+       
 
       )}
+      <Search/>
     </main>
   );
 }
