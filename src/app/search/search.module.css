@@ -1,11 +1,16 @@
+.form{
+    justify-content: center;
+    margin-top: 100px;
+}
+
 .form input{
     padding: 20px;
     background-color: var(--bg);
     color: var(--textColor);
-    border: rgb(189, 16, 16) 10px;
-    margin-top: 5px;
-    margin-right: 20px;
-    border-radius: 5px;
+    border:2px;
+    margin: 5px;
+    justify-items: start;
+    border-radius: 15px;
   }
   
   .form button{
@@ -14,11 +19,12 @@
     background-color: black;
     color: white;
     font-weight: bold;
+    margin:5px ;
     border: none;
     border-radius: 5px;
   }
   .result {
-    width: 400px;
+    width: 500px;
     border-radius: 5px;
     margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

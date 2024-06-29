@@ -6,37 +6,46 @@ import styles from "./search.module.css";
 
 const Search = () => {
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState([]);
+  const [generatedText, setGeneratedText] = useState('');
 
-  const handleSearch = async (e) => {
+  const handleTestAI = async (e) => {
     e.preventDefault();
-    const response = await axios.post('/api/search', { query });
-    setResults(response.data.results);
+    try {
+      const response = await axios.post('/api/search', { query });
+      setGeneratedText(response.data.generatedText);
+    } catch (error) {
+      console.error("Error generating text:", error);
+      setGeneratedText("An error occurred while generating text. Please try again.");
+    }
   };
+
   const handleClear = () => {
     setQuery('');
-    setResults([]);
+    setGeneratedText('');
   };
+
   return (
-    <form className={styles.form} onSubmit={handleSearch}>
-      <input
-        type="text"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="Search"
-      />
-      <button type="submit">Search</button>
-      <button type="button" onClick={handleClear}>Clear</button>
-      <div className={styles.result}>
-        {results.map((result) => (
-           <div key={result._id} className={styles.result}>
-           <p><span>Name:</span> {result.username}</p>
-           <p><span>Email:</span> {result.email}</p>
-           <p><span>University:</span> {result.school}</p>
+    <div className={styles.form}>
+      <form className={styles.inputContainer} onSubmit={handleTestAI}>
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Enter prompt"
+        />
+        <div className={styles.buttonContainer}>
+          <button type="submit">Generate</button>
+          <button type="button" onClick={handleClear}>Clear</button>
+        </div>
+      </form>
+      <div className={styles.resultContainer}>
+        {generatedText && (
+          <div className={styles.result}>
+            <p>{generatedText}</p>
           </div>
-        ))}
+        )}
       </div>
-    </form>
+    </div>
   );
 };
 

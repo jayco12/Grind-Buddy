@@ -3,12 +3,13 @@
 import Search from "./search/Search";
 import styles from "./page.module.css";
 const Home=({session}) => {
+  
   return (
     <main className={styles.main}>
       {session?.user ? (
           <>
       <div className={styles.description}>
-      Welcome 👋, yay you have literally signed in
+       yay you have literally signed in. Lets help you find that Grind buddy 😉
     
       </div>
       </>
@@ -19,7 +20,6 @@ const Home=({session}) => {
            
        </div>
        
-
       )}
       <Search/>
     </main>
