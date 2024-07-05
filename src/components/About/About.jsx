@@ -11,11 +11,13 @@ const About = () => {
             </div>
             <div className="about-left">
                 <div className="about-details">
-                    <li></li>
+                    <p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit.</p>
+                    <p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit.</p>
+                    <p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit.</p>
                 </div>
             </div>
             <div className="about-right">
-                
+                <img src="" alt="" />
             </div>
         </div>
         <div className="about-achievements">
