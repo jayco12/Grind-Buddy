@@ -19,11 +19,16 @@
     justify-content: center;
     gap: 80px;
     margin: 80px 170px;
+    max-width: 1100px;
 }
 
 .hero-sections {
     display: flex;
     gap: 80px;
+}
+
+.hero-left {
+    
 }
 
 .hero-right {
