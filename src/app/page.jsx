@@ -2,6 +2,8 @@
 
 import Search from "./search/Search";
 import styles from "./page.module.css";
+import Hero from "../components/Hero/Hero";
+
 const Home=({session}) => {
   
   return (
@@ -21,6 +23,7 @@ const Home=({session}) => {
        </div>
        
       )}
+      <Hero/>
       <Search/>
     </main>
   );
