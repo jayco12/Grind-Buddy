@@ -17,7 +17,7 @@ const Home=({session}) => {
       </>
       ):(
         <div className={styles.description}>
-           Welcome 👋, lets help you find that Grind buddy 😉
+           {/* Welcome 👋, lets help you find that Grind buddy 😉 */}
        
            
        </div>
