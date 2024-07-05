@@ -1,5 +1,5 @@
 import './Hero.css'
-import logo_gb from '../../assets/logo_gb.png'
+import logo_gb from '../../assets/logo_gb.png';
 
 const Hero = () => {
   return (
@@ -9,7 +9,7 @@ const Hero = () => {
           <img src={logo_gb} alt="Logo" />
         </div>
         <div className="hero-right">
-          <h1>Slogan/Heading</h1>
+          <h1>HEADING</h1>
           <p>Add small/powerful blurb about the app.</p>
         </div>
       </div>
