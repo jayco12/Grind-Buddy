@@ -22,9 +22,9 @@ const About = () => {
             </div>
         </div>
         <div className="about-action">
-{/* Arrow isn't working */}
+            {/* Arrow isn't working */}
             <div className="about-form">TRY IT
-                <img src="arrow_forward" alt="" /> 
+                <img src={arrow_forward} alt="" /> 
             </div>
         </div>
         <div className="about-achievements">

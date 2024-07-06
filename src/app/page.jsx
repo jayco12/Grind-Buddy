@@ -4,6 +4,7 @@ import Search from "./search/Search";
 import styles from "./page.module.css";
 import Hero from "../components/Hero/Hero";
 import About from "@/components/About/About";
+import Contact from "@/components/Contact/Contact";
 
 const Home=({session}) => {
   
@@ -27,6 +28,7 @@ const Home=({session}) => {
       <Hero/>
       <About/>
       <Search/>
+      <Contact/>
     </main>
   );
 }
