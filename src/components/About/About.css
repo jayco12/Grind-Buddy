@@ -66,6 +66,26 @@
     gap: 80px;
 }
 
+.about-action {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 24px;
+    font-weight: 500px;
+    margin-bottom: 50px;
+}
+
+.about-form {
+    padding: 25px 80px;
+    border-radius: 10px;
+    background: linear-gradient(264deg, #77DDCB -5.09%, #9EFBB8 106.28%);
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+}
+
 .about-achievements {
     display: flex;
     width: 100%;

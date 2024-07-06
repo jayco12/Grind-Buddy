@@ -1,5 +1,6 @@
 import React from 'react'
 import './About.css'
+import arrow_forward from '../../assets/arrow_forward.png'
 
 const About = () => {
   return (
@@ -18,6 +19,12 @@ const About = () => {
             </div>
             <div className="about-right">
                 <img src="" alt="" />
+            </div>
+        </div>
+        <div className="about-action">
+{/* Arrow isn't working */}
+            <div className="about-form">TRY IT
+                <img src="arrow_forward" alt="" /> 
             </div>
         </div>
         <div className="about-achievements">
