@@ -27,7 +27,10 @@
   }
   @media (max-width: 768px) {
     .container{
-  
+      position: sticky;
+      top: 0px;
+right: 0px; 
+left: 0px;
       height: 60px;
       width: 300px;
       box-shadow: inset 0 0 20px #535050;

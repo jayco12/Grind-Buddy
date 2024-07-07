@@ -7,9 +7,15 @@
     
   }
   .box{
-    background-color: white;
-    padding: 10px;
     border-radius: 20px;
+    background: linear-gradient(264deg, #77DDCB -5.09%, #9EFBB8 106.28%);
+    cursor: pointer;
+    font-family: 'Josefin Sans', sans-serif;
+    color: black;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
   }
   .box:hover{
     background-color: grey;

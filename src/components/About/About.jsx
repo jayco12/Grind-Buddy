@@ -3,7 +3,6 @@ import './About.css'
 import Image from 'next/image'
 import arrow_forward from '../../../public/assets/arrow_forward.png'
 import study from '../../../public/assets/study .png'
-import Col from 'react-bootstrap'
 
 const About = () => {
   return (
@@ -13,16 +12,16 @@ const About = () => {
                 <h1>HEADING</h1>
                 <p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit, consectetur adipiscing elit, sed do eiusmod tempor <b>incididunt</b> ut labore et dolore magna aliqua.</p>
             </div>
-            <Col xs={12} md={6} xl={6}>
+            <div className="about-left">
                 <div className="about-details">
                     <p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit.</p>
                     <p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit.</p>
                     <p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit.</p>
                 </div>
-            </Col >
-            <Col xs={12} md={6} xl={6} className="about-right">
+            </div>
+            <div className="about-right">
             <Image src={study} alt="" height={200} width={200}/> 
-            </Col>
+            </div>
         </div>
         <div className="about-action">
             <div className="about-form">TRY IT
