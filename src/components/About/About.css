@@ -45,9 +45,7 @@
 }
 
 .about-left {
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
+  
 }
 
 .about-details p {
@@ -60,10 +58,16 @@
     color: #7F3AFE;
 }
 
+.about-details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
 .about-right {
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 30px;
 }
 
 .about-action {

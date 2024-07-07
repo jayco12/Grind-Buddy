@@ -1,12 +1,13 @@
-import './Hero.css'
-import logo_gb from '../../assets/logo_gb.png';
+import styles from './Hero.css'
+import Image from 'next/image'
+import logo_gb from '../../../public/assets/logo_gb.png'
 
 const Hero = () => {
   return (
     <div className="hero">
       <div className="hero-sections">
         <div className="hero-left">
-          <img src={logo_gb} alt="Logo" />
+        <Image src={logo_gb} height={500} width={500} alt=""/>
         </div>
         <div className="hero-right">
           <h1>HEADING</h1>

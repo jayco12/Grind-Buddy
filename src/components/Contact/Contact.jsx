@@ -1,7 +1,8 @@
 import React from 'react'
 import './Contact.css'
-import github_icon from '../../assets/github_icon.png'
-import mail_icon from '../../assets/mail_icon.png'
+import Image from 'next/image'
+import github_icon from '../../../public/assets/github_icon.png'
+import mail_icon from '../../../public/assets/mail_icon.png'
 
 const Contact = () => {
   return (
@@ -22,11 +23,11 @@ const Contact = () => {
                 <div className="contact-details">
                     {/* Icons aren't loading in */}
                     <div className="contact-detail">
-                        <img src={mail_icon} alt=""/>
+                    <Image src={mail_icon} height={40} width={40} alt=""/>
                         <p>example@gmail.com</p>
                     </div>
                     <div className="contact-detail">
-                        <img src={github_icon} alt=""/>
+                    <Image src={github_icon} height={40} width={40} alt=""/>
                         <p>github.com/example</p>
                     </div>
                 </div>

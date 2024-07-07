@@ -5,10 +5,18 @@ import styles from "./links.module.css";
 import NavLink from "./navLink/navLink";
 import Image from "next/image";
 import { handleLogout } from "@/lib/action";
-
+import company from "../../../../public/assets/company.png"
+import home from "../../../../public/assets/home.svg"
 const links = [
+  {
+    title: <Image src={home} height={25} width={25} alt=""/>,
+    path: "/",
+  },
+  {
+    title:  <Image src={company} height={25} width={25} alt=""/>,
+    path: "/about",
+  },
 
- 
 ];
 
 const Links = ({session}) => {
@@ -21,7 +29,9 @@ const Links = ({session}) => {
   return (
     <div className={styles.container}>
       <div className={styles.links}>
-       
+      {links.map((link) => (
+          <NavLink item={link} key={link.title} />
+        ))}
         {session?.user ? (
           <>
             <form action={handleLogout}>
@@ -40,8 +50,10 @@ const Links = ({session}) => {
           {links.map((link) => (
             <NavLink item={link} key={link.title} />
           ))}
+
         </div>
       )}
+     
     </div>
   );
 };

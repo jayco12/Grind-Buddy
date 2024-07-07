@@ -1,6 +1,9 @@
 import React from 'react'
 import './About.css'
-import arrow_forward from '../../assets/arrow_forward.png'
+import Image from 'next/image'
+import arrow_forward from '../../../public/assets/arrow_forward.png'
+import study from '../../../public/assets/study .png'
+import Col from 'react-bootstrap'
 
 const About = () => {
   return (
@@ -10,21 +13,20 @@ const About = () => {
                 <h1>HEADING</h1>
                 <p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit, consectetur adipiscing elit, sed do eiusmod tempor <b>incididunt</b> ut labore et dolore magna aliqua.</p>
             </div>
-            <div className="about-left">
+            <Col xs={12} md={6} xl={6}>
                 <div className="about-details">
                     <p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit.</p>
                     <p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit.</p>
                     <p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit.</p>
                 </div>
-            </div>
-            <div className="about-right">
-                <img src="" alt="" />
-            </div>
+            </Col >
+            <Col xs={12} md={6} xl={6} className="about-right">
+            <Image src={study} alt="" height={200} width={200}/> 
+            </Col>
         </div>
         <div className="about-action">
-            {/* Arrow isn't working */}
             <div className="about-form">TRY IT
-                <img src={arrow_forward} alt="" /> 
+                <Image src={arrow_forward} alt="" height={30} width={30}/> 
             </div>
         </div>
         <div className="about-achievements">
