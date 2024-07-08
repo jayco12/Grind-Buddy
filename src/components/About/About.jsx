@@ -33,7 +33,7 @@ const About = () => {
                 </div>
             </div>
             <div className="about-right">
-                <Image src={study} alt="" height={200} width={200}/> 
+                <Image src={study} alt="" width={500}/> 
             </div>
         </div>
         <div className="about-action">

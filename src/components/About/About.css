@@ -99,7 +99,6 @@
 .about-right {
     display: flex;
     flex-direction: column;
-    /* margin:  */
 }
 
 .about-action {
