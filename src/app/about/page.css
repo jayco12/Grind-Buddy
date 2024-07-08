@@ -1,0 +1,112 @@
+.about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin: 80px 170px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+/* .about-us-intro {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+} */
+
+.about-us-intro h1 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 40px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #9EFBB8;
+    margin-bottom: 30px;
+}
+
+.about-us-intro p {
+    text-align: center;
+    font-size: 23px;
+    font-weight: 300;
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 25px;
+}
+
+
+.about-us-format{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid #9EFBB8;
+    transition: 0.4s;
+    cursor: pointer;
+    background-color: #051126;
+}
+.about-us-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+.about-us-format h3{
+    font-size: 22px;
+    font-weight: 600;
+}
+.about-us-format h2{
+    font-size: 30px;
+    font-weight: 800;
+    background: linear-gradient(270deg, #BA26FF 50%, #7F3AFE 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.about-us-format p{
+    color: white;
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 300px;
+}
+.about-us-readmore{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 20px;
+}
+.about-us-readmore img{
+    width: 20px;
+}
+.about-us-format:hover{
+    border: 2px solid #BA26FF;
+    background-image: linear-gradient(45deg,#778EDD,#6CBBF1);
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+@media(max-width:830px){
+    .about-us {
+        align-items: start;
+        gap: 70px;
+        margin: 20px 6%;
+    }
+    
+    .about-us-format{
+        gap: 10px;
+        padding: 20px;
+    }
+    .about-us-format h2{
+        font-size: 20px;
+    }
+    .about-us-format p{
+        font-size:  16px;
+        line-height: 26px;
+        max-width: 300px;
+        color: white;
+    }
+    
+    .about-us-container{
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
