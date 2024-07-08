@@ -25,7 +25,7 @@
     background: linear-gradient(264deg, #BA26FF -5.09%, #7F3AFE 106.28%);
     position: relative; 
     width: 80vw;
-    max-width: 43em;
+    max-width: 50em;
     min-height: 25em;
     border-radius: 0.6em;
     transform: translate(-50%, -50%);
@@ -38,7 +38,6 @@
 .testimonial-container {
     width: 85%;
     height: 100%;
-    /* position: relative; */
     margin: auto;
     padding: 1.8em 1.2em;
 }
