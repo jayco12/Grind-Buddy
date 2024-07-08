@@ -73,7 +73,7 @@
 .contact-details {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     font-size: 15px;
     text-align: right;
 }
