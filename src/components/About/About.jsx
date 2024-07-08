@@ -30,7 +30,7 @@ const About = () => {
         </div>
         <div className="about-action">
             <div className="about-form">TRY IT
-                <Image src={arrow_forward} alt="" height={30} width={30}/> 
+                <Image src={arrow_forward} alt=""/> 
             </div>
         </div>
         <div className="about-achievements">

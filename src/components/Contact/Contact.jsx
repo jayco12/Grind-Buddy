@@ -21,7 +21,6 @@ const Contact = () => {
                 <h1>CONTACT US</h1>
                 <p>Feel free to message us if there are any problems, or want to provide feedback and suggestions!</p>
                 <div className="contact-details">
-                    {/* Icons aren't loading in */}
                     <div className="contact-detail">
                     <Image src={mail_icon} height={40} width={40} alt=""/>
                         <p>example@gmail.com</p>

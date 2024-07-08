@@ -50,16 +50,18 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    text-align: left;
+    margin-right: 60px;
 }
 
 .about-details {
     display: flex;
-    flex-direction: column;
-    align-items: left;
+    align-items: center;
+    gap: 20px;
 }
 
 .about-details p {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 200;
     font-family: 'Josefin Sans', sans-serif;
 }
@@ -70,8 +72,9 @@
 
 .about-details {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    align-items: left;
+    /* flex-direction: column; */
+    gap: 10px;
 }
 
 .about-right {
@@ -90,6 +93,9 @@
 }
 
 .about-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 25px 80px;
     border-radius: 10px;
     background: linear-gradient(264deg, #77DDCB -5.09%, #9EFBB8 106.28%);
@@ -103,6 +109,12 @@
 .about-form:hover {
     transform: scale(1.1);
     transition: 0.3s;
+}
+
+.about-form img {
+    height: 30px;
+    width: 30px;
+    margin-left: auto; 
 }
 
 .about-achievements {
