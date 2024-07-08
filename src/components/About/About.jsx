@@ -4,10 +4,18 @@ import Image from 'next/image'
 import arrow_forward from '../../../public/assets/arrow_forward.png'
 import study from '../../../public/assets/study .png'
 import bullet_icon from '../../../public/assets/bullet_icon.png'
+import purple_hue from '../../../public/assets/purple_hue.png'
+import blue_hue from '../../../public/assets/blue_hue.png'
 
 const About = () => {
   return (
     <div className="about">
+        <div className="design-element1">
+            <Image src={purple_hue} alt="Design Element" layout="fill" objectFit="contain" />
+        </div>
+        <div className="design-element2">
+            <Image src={blue_hue} alt="Design Element" layout="fill" objectFit="contain" />
+        </div>
         <div className="about-intro">
             <h1>HEADING</h1>
             <p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit, consectetur adipiscing elit, sed do eiusmod tempor <b>incididunt</b> ut labore et dolore magna aliqua.</p>
