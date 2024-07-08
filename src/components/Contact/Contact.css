@@ -10,7 +10,7 @@
 
 .contact-section {
     display: flex;
-    gap: 150px;
+    gap: 100px;
 }
 
 .contact-left {
@@ -28,7 +28,7 @@
 
 .contact-left input {
     border: none;
-    width: 700px;
+    width: 600px;
     height: 78px;
     padding-left: 20px;
     border-radius: 4px;
@@ -39,7 +39,7 @@
 }
 
 .contact-left textarea {
-    width: 675px;
+    width: 575px;
     border: none;
     padding: 25px;
     border-radius: 4px;
@@ -80,7 +80,7 @@
 
 .contact-detail {
     display: flex;
-    align-items: center;
+    justify-content: flex-end;
     gap: 20px;
 }
 
