@@ -1,0 +1,108 @@
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin: 50px auto;
+    max-width: 1100px;
+}
+
+.testimonials h1 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 40px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 30px;
+}
+
+.testimonials-sections {
+    margin-top: 100px;
+    box-sizing: border-box; 
+}
+
+.wrapper {
+    background: linear-gradient(264deg, #BA26FF -5.09%, #7F3AFE 106.28%);
+    position: relative; 
+    width: 80vw;
+    max-width: 43em;
+    min-height: 25em;
+    border-radius: 0.6em;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    box-shadow: 0 1.8em 3em rgba(1, 17, 39, 0.15);
+    display: flex;
+  }
+
+.testimonial-container {
+    width: 85%;
+    height: 100%;
+    /* position: relative; */
+    margin: auto;
+    padding: 1.8em 1.2em;
+}
+
+.wrapper button {
+    font-size: 1.8em;
+    height: 2.2em;
+    width: 2.2em;
+    background-color: #ffffff;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    border: none;
+    color: #78DDCB;
+    box-shadow: 0 0 1em rgba(1, 17, 39, 0.25);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+button#next {
+    right: -1.1em;
+}
+
+button#prev {
+    left: -1.1em;
+}
+
+.testimonial-container img {
+    display: block;
+    margin: 1.8em auto 1.25em auto;
+    border-radius: 50%;
+    width: 4.4em;
+}
+
+.testimonial-container h3 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 17px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.testimonial-container h6 {
+    color: #78DDCB;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    font-weight: 600;
+    text-align: center;
+    line-height: 20px;
+}
+
+.testimonial-container p {
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 2em;
+    letter-spacing: 0.05em;
+    margin-bottom: 25px;
+}
+
+@media screen and (max-width: 650px) {
+    .wrapper {
+      font-size: 14px;
+    }
+}

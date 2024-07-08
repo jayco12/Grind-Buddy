@@ -3,24 +3,29 @@ import './About.css'
 import Image from 'next/image'
 import arrow_forward from '../../../public/assets/arrow_forward.png'
 import study from '../../../public/assets/study .png'
+import bullet_icon from '../../../public/assets/bullet_icon.png'
 
 const About = () => {
   return (
     <div className="about">
+        <div className="about-intro">
+            <h1>HEADING</h1>
+            <p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit, consectetur adipiscing elit, sed do eiusmod tempor <b>incididunt</b> ut labore et dolore magna aliqua.</p>
+        </div>
         <div className="about-sections">
-            <div className="about-intro">
-                <h1>HEADING</h1>
-                <p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit, consectetur adipiscing elit, sed do eiusmod tempor <b>incididunt</b> ut labore et dolore magna aliqua.</p>
-            </div>
             <div className="about-left">
                 <div className="about-details">
-                    <p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit.</p>
-                    <p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit.</p>
-                    <p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit.</p>
+                    <Image src={bullet_icon} alt="" width={20}/><p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit.</p>
+                </div>
+                <div className="about-details">
+                    <Image src={bullet_icon} alt="" width={20}/><p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit.</p>
+                </div>
+                <div className="about-details">
+                    <Image src={bullet_icon} alt="" width={20}/><p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit.</p>
                 </div>
             </div>
             <div className="about-right">
-            <Image src={study} alt="" height={200} width={200}/> 
+                <Image src={study} alt="" height={200} width={200}/> 
             </div>
         </div>
         <div className="about-action">

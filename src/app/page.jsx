@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 import Hero from "../components/Hero/Hero";
 import About from "@/components/About/About";
 import Contact from "@/components/Contact/Contact";
+import Testimonials from "@/components/Testimonials/Testimonials";
 
 const Home=({session}) => {
   
@@ -27,7 +28,8 @@ const Home=({session}) => {
       )}
       <Hero/>
       <About/>
-      <Search/>
+      {/* <Search/> */}
+      <Testimonials/>
       <Contact/>
     </main>
   );
