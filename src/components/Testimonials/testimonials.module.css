@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     gap: 100px;
-    margin: 50px auto;
+    margin: 30px auto;
     max-width: 1000px;
 }
 
@@ -34,7 +34,23 @@
     box-shadow: 0 1.8em 3em rgba(1, 17, 39, 0.15);
     display: flex;
   }
-
+  @media (max-width: 768px) {
+    .wrapper {
+        .wrapper {
+            background: linear-gradient(264deg, #BA26FF -5.09%, #7F3AFE 106.28%);
+            position: relative; 
+            width: 60vw;
+            max-width: 50em;
+            min-height: 25em;
+            border-radius: 0.6em;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+            box-shadow: 0 1.8em 3em rgba(1, 17, 39, 0.15);
+            display: flex;
+          }
+    }
+}
 .testimonial-container {
     width: 85%;
     height: 100%;
