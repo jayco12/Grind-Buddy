@@ -4,10 +4,11 @@
     align-items: center;
     justify-content: center;
     gap: 100px;
-    margin: 80px 170px;
+    margin: 80px auto;
     width: 100%;
-    max-width: 1100px;
+    max-width: 900px;
 }
+
 
 /* .about-us-intro {
     display: flex;
