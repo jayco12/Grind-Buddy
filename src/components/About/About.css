@@ -31,12 +31,15 @@
     gap: 100px;
     margin: 80px 170px;
     max-width: 100%;
+    box-sizing: border-box;
 }
 
 .about-sections {
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
+    width: 100%;
+    max-width: 950px;
 }
 
 .about-intro {
@@ -175,7 +178,7 @@
 @media (max-width: 768px) {
     .about{
         gap: 80px;
-        margin: 50px 70px;
+        margin: 50px 10px;
         align-items: start;
     }
     .about-sections {

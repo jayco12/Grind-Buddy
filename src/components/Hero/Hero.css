@@ -21,6 +21,7 @@
     margin: 80px 170px;
     width: 100%;
     max-width: 1000px;
+    box-sizing: border-box;
 }
 
 .hero-sections {
@@ -41,17 +42,25 @@
         align-items: center;
         justify-content: center;
         gap: 80px;
-        margin: 80px 170px;
+        margin: 50px 10px;
         width: 100%;
         max-width: 700px;
     }
+    .hero-sections {
+        flex-direction: column;
+        align-items: center;
+    }
     .hero img {
         max-width: 300px;
-        flex-direction: inherit;
         height: auto;
         align-items: center;
     }    
-    
+    .hero h1 {
+        font-size: 35px;
+    }
+    .hero p {
+        font-size: 20px;
+    }
 }
 .hero h1 {
     display: flex;
@@ -75,12 +84,3 @@
 }
 
 
-
-@media (max-width: 700px) {
-    .hero h1 {
-        font-size: 35px;
-    }
-    .hero p {
-        font-size: 20px;
-    }
-}
