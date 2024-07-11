@@ -108,6 +108,8 @@
     font-size: 24px;
     font-weight: 500px;
     margin-bottom: 50px;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .about-form {
@@ -175,12 +177,29 @@
     .about-sections {
         flex-direction: column;
     }
+    .about-left {
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .about-right {
+        margin: 30px auto;
+    }
     .about-intro h1 {
         font-size: 30px;
     }
     .about-intro p {
-        font-size: 15px;
+        font-size: 20px;
         line-height: 20px;
+    }
+    .about-details p {
+        font-size: 15px;
+    }
+    .about-right img {
+        max-width: 300px;
+        height: auto;
+    }
+    .about-form {
+        padding: 20px 45px;
     }
     .about-achievements {
         justify-content: space-between;
