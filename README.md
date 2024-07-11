@@ -2,7 +2,9 @@
 
 ## Description
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+A web app that connects and recommends study partners in your school. Recommendations would be based on AI clustering.
+
+Built using: Next.js, Javascript, CSS
 
 ## Getting Started
 
@@ -24,7 +26,23 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Credits
+
+* Joseph Oduyebo: https://github.com/jayco12
+* Allyssa: https://github.com/apanga01/ 
+* Yuvan Chikka: https://github.com/Ultraviolet-Chikorita
+* Muhammad Akbar: https://github.com/muhammadakbar7
+* Deborah: https://github.com/adeborah3588
+* Tadiwa (Nigel)
+* Sinmi
+
+## License
+
+This project, [Grind Buddy], is licensed under the terms of the GNU General Public License v3.0. 
+
+## Additonal help
+
+### Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -33,7 +51,7 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+### Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 

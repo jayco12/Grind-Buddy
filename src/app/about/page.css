@@ -55,7 +55,7 @@
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
     color: #9EFBB8;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 .about-us-format{
@@ -111,15 +111,26 @@
 }
 @media(max-width:830px){
     .about-us {
-        align-items: start;
         gap: 70px;
-        margin: 20px 6%;
+    }
+
+    .about-us-intro h1{
+        font-size: 30px;
+    }
+
+    .about-us-intro p {
+        font-size: 20px;
     }
     
+    .about-us-team h2 {
+        font-size: 26px;
+    }
+
     .about-us-format{
         gap: 10px;
         padding: 20px;
     }
+
     .about-us-format h2{
         font-size: 20px;
     }
@@ -127,7 +138,6 @@
         font-size:  16px;
         line-height: 26px;
         max-width: 300px;
-        color: white;
     }
     
     .about-us-container{
