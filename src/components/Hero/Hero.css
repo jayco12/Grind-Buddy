@@ -24,8 +24,10 @@
 }
 
 .hero-sections {
-    display: flex;
-    gap: 80px;
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+    
 }
 
 
@@ -35,16 +37,17 @@
     flex-direction: column;
     gap: 30px;
 }
-@media (max-width: 760px) {
+@media (max-width: 900px) {
     .hero img {
-        max-width: 300px;
-        flex-direction: inherit;
-        height:300px;
-        align-items: center;
+        height: 200px;
+        width:200px
     }
+    .hero-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
     .hero {
-        display: flex;
-        flex-direction: row;
         align-items: center;
         justify-content: center;
         gap: 80px;
