@@ -101,6 +101,11 @@
     flex-direction: column;
 }
 
+/* .about-right img {
+    max-width: 300px;
+    height: auto;
+} */
+
 .about-action {
     display: flex;
     align-items: center;
@@ -168,7 +173,7 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     .about{
         gap: 80px;
         margin: 50px 70px;
