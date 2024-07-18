@@ -16,7 +16,7 @@ const AboutPage = () => {
             <Image src={blue_hue} alt="Design Element" layout="fill" objectFit="contain" />
         </div>
         <div className="about-us-intro">
-          <h1>Blurb about teams goal/interest in making this.</h1>
+          <h1>About Us</h1>
           <p>At Grind Buddy, our mission is to enhance the academic experience by fostering connections between students. We believe that studying with the right partner can significantly improve productivity and learning outcomes. Our team is passionate about education and technology, and we have combined these passions to create an app that makes finding a study partner easy and effective.</p>
         </div>
         <div className="about-us-team">
