@@ -1,7 +1,7 @@
 // import Image from 'next/image'
-import joseph_headshot from './joseph_headshot.png'
-import yuvan_headshot from './yuvan_headshot.png'
-import deborah_headshot from './deboroah_headshot.png'
+import joseph_headshot from './joseph_headshot.jpg'
+import yuvan_headshot from './joseph_headshot.jpg'
+import deborah_headshot from './joseph_headshot.jpg'
 
 const Team_Data = [
     {
