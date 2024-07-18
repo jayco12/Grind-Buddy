@@ -7,39 +7,39 @@ import deborah_headshot from './deborah_headshot.jpg'
 const Team_Data = [
     {
         t_no:"01",
-        t_name:"Name 1",
+        t_name:"Joseph Oduyebo",
         t_pic: joseph_headshot,
-        t_desc:"Role 1"
+        t_desc:"Founder"
     },
     {
         t_no:"02",
-        t_name:"Name 2",
+        t_name:"Sinmi Ojeyomi",
         t_pic: sinmi_headshot,
-        t_desc:"Role 2"
+        t_desc:"Ml/Backend Engineer"
     },
     {
         t_no:"03",
-        t_name:"Name 3",
+        t_name:"Deborah",
         t_pic:deborah_headshot,
-        t_desc:"Role 3"
+        t_desc:"Ml/Backend Engineer"
     },
     {
         t_no:"04",
-        t_name:"Name 4",
+        t_name:"Yuvan",
         t_pic: yuvan_headshot,
-        t_desc:"Role 4"
+        t_desc:"Ml/Backend Lead"
     },
     {
         t_no:"05",
-        t_name:"Name 5",
+        t_name:"Allyssa",
         t_pic: deborah_headshot,
-        t_desc:"Role 5"
+        t_desc:"Frontend Lead/ Project Manager"
     },
     {
         t_no:"06",
-        t_name:"Name 6",
+        t_name:"Muhammed Akbar",
         t_pic: deborah_headshot,
-        t_desc:"Role 6"
+        t_desc:"Frontend Engineer"
     },
 ]
  
