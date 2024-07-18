@@ -1,7 +1,8 @@
 // import Image from 'next/image'
 import joseph_headshot from './joseph_headshot.jpg'
-import yuvan_headshot from './joseph_headshot.jpg'
-import deborah_headshot from './joseph_headshot.jpg'
+import yuvan_headshot from './yuvan_headshot.PNG'
+import sinmi_headshot from './sinmi_headshot.jpeg'
+import deborah_headshot from './deborah_headshot.jpg'
 
 const Team_Data = [
     {
@@ -13,19 +14,19 @@ const Team_Data = [
     {
         t_no:"02",
         t_name:"Name 2",
-        t_pic: yuvan_headshot,
+        t_pic: sinmi_headshot,
         t_desc:"Role 2"
     },
     {
         t_no:"03",
         t_name:"Name 3",
-        t_pic: deborah_headshot,
+        t_pic:deborah_headshot,
         t_desc:"Role 3"
     },
     {
         t_no:"04",
         t_name:"Name 4",
-        t_pic: deborah_headshot,
+        t_pic: yuvan_headshot,
         t_desc:"Role 4"
     },
     {
