@@ -10,8 +10,8 @@ const Hero = () => {
         <Image src={logo_gb} width={600} alt=""/>
         </div>
         <div className="hero-right">
-          <h1>HEADING</h1>
-          <p>Add small/powerful blurb about the app.</p>
+          <h1>Find Your Perfect Study Partner, Anytime, Anywhere</h1>
+          <p>Grind Buddy makes it easy to connect with the ideal study partner, whether you are at home or on the go. With our advanced matching system, you will always find the perfect companion to boost your productivity and keep you motivated.</p>
         </div>
       </div>
     </div>
