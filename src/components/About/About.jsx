@@ -17,19 +17,19 @@ const About = () => {
             <Image src={blue_hue} alt="Design Element" layout="fill" objectFit="contain" />
         </div>
         <div className="about-intro">
-            <h1>HEADING</h1>
-            <p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit, consectetur adipiscing elit, sed do eiusmod tempor <b>incididunt</b> ut labore et dolore magna aliqua.</p>
+            <h1>COMMUNITY OF LEARNERS</h1>
+            <p>Join a <b>community</b> of like-minded individuals who are also looking to  <b>enhance</b> their learning experience. Share tips, resources, and support each other on your academic journey.</p>
         </div>
         <div className="about-sections">
             <div className="about-left">
                 <div className="about-details">
-                    <Image src={bullet_icon} alt="" width={20}/><p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit.</p>
+                    <Image src={bullet_icon} alt="" width={20}/><p>Grind Buddy uses advanced algorithms to match you with the most compatible <b>  study partner</b>. Whether you prefer studying <b>in person with someone nearby or virtually with someone who shares your study habits</b>, Grind Buddy has you covered.</p>
                 </div>
                 <div className="about-details">
-                    <Image src={bullet_icon} alt="" width={20}/><p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit.</p>
+                    <Image src={bullet_icon} alt="" width={20}/><p>Choose between in-person and virtual study sessions. Grind Buddy ensures that you can find the  <b>partner</b> regardless of your location or preference.</p>
                 </div>
                 <div className="about-details">
-                    <Image src={bullet_icon} alt="" width={20}/><p>Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit.</p>
+                    <Image src={bullet_icon} alt="" width={20}/><p>Having a dedicated study partner helps you stay<b>focused and motivated</b> . Grind Buddy ensures that you can make the most out of your study time.</p>
                 </div>
             </div>
             <div className="about-right">
