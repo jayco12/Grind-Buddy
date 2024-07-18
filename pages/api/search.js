@@ -4,7 +4,7 @@ import { User } from '../../src/lib/models';
 
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GEN_AI_KEY);
 
-export default async (req, res) => {
+const handler = async (req, res) => {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -61,3 +61,4 @@ export default async (req, res) => {
   }
 
 };
+export default handler;
