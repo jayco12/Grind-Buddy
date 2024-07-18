@@ -88,12 +88,11 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.about-us-format p{
-    color: white;
-    font-size: 20px;
-    line-height: 30px;
-    max-width: 300px;
-}
+
+/* .team-pic {
+    width: 200px;
+    height: 200px;
+} */
 .about-us-readmore{
     display: flex;
     gap: 10px;

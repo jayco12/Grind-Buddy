@@ -1,33 +1,44 @@
+// import Image from 'next/image'
+import joseph_headshot from './joseph_headshot.png'
+import yuvan_headshot from './yuvan_headshot.png'
+import deborah_headshot from './deboroah_headshot.png'
+
 const Team_Data = [
     {
         t_no:"01",
-        this_name:"Name 1",
-        t_desc:"Write what role they took in project & about themselves..."
+        t_name:"Name 1",
+        t_pic: joseph_headshot,
+        t_desc:"Role 1"
     },
     {
         t_no:"02",
         t_name:"Name 2",
-        t_desc:"Write what role they took in project & about themselves..."
+        t_pic: yuvan_headshot,
+        t_desc:"Role 2"
     },
     {
         t_no:"03",
         t_name:"Name 3",
-        t_desc:"Write what role they took in project & about themselves..."
+        t_pic: deborah_headshot,
+        t_desc:"Role 3"
     },
     {
         t_no:"04",
         t_name:"Name 4",
-        t_desc:"Write what role they took in project & about themselves..."
+        t_pic: deborah_headshot,
+        t_desc:"Role 4"
     },
     {
         t_no:"05",
         t_name:"Name 5",
-        t_desc:"Write what role they took in project & about themselves..."
+        t_pic: deborah_headshot,
+        t_desc:"Role 5"
     },
     {
         t_no:"06",
         t_name:"Name 6",
-        t_desc:"Write what role they took in project & about themselves..."
+        t_pic: deborah_headshot,
+        t_desc:"Role 6"
     },
 ]
  

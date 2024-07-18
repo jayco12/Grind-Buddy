@@ -27,9 +27,11 @@ const AboutPage = () => {
           return <div key={index} className='about-us-format'>
              <h3>{team.t_no}</h3>
              <h2>{team.t_name}</h2>
-             <p>{team.t_desc}</p>
+             <div className='team-pic'>
+                <Image src={team.t_pic} alt={team.t_name} width={200} height={200} />
+              </div>
              <div className='about-us-readmore'>
-              <p>Read More</p>
+              <p>{team.t_desc}</p>
               <img src={arrow_forward} alt="" />
              </div>
           </div>
