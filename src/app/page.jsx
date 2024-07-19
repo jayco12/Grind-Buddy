@@ -1,6 +1,6 @@
 "use client";
 
-import Search from "./search/Search";
+
 import styles from "./page.module.css";
 import Hero from "../components/Hero/Hero";
 import About from "@/components/About/About";
@@ -28,7 +28,6 @@ const Home=({session}) => {
       )}
       <Hero/>
       <About/>
-      {/* <Search/> */}
       <Testimonials/>
       <Contact/>
     </main>

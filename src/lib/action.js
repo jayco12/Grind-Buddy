@@ -103,7 +103,7 @@ export const login = async (prevState, formData) => {
   const { username, password } = Object.fromEntries(formData);
 
   try {
-    await signIn("credentials", { username, password });
+    await signIn("credentials", { username, password, callbackUrl:"/search" });
     // toast.success(`Login successful`);
   } catch (err) {
     console.log(err);

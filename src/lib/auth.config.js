@@ -16,7 +16,15 @@ export const authConfig = {
           session.user.id = token.id;
         }
         return session;
+
       },
+      async redirect({url,baseUrl}) {
+      if(url =='/login'){
+        return `${baseUrl}/search`;
+      }
+      return baseUrl;
+
+    },
       authorized({ auth, request }) {
         const user = auth?.user;
         const isOnLoginPage = request.nextUrl?.pathname.startsWith("/login");

@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import 'react-toastify/dist/ReactToastify.css';
-import Search from "./search/Search";
+import Search from "./search/page";
 import Navbar from "@/components/navbar/Navbar";
 // import Navbar from "@/components/navbar/Navbar";
 
