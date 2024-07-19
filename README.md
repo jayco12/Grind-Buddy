@@ -34,7 +34,8 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 * Muhammad Akbar: https://github.com/muhammadakbar7
 * Deborah: https://github.com/adeborah3588
 * Tadiwa (Nigel)
-* Sinmi
+* Sinmi: https://github.com/sinmi-hub
+
 
 ## License
 
