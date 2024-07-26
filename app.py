@@ -6,32 +6,38 @@ app = Flask(__name__)
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
 def find_best_match(new_request, current_requests):
-    prompt = f"""
-    Given the following new study partner request:
-    {new_request}
+    # Convert current_requests to a format suitable for the API
+    current_requests_formatted = "\n".join(current_requests)
 
-    And the current available requests:
-    {current_requests}
+    messages = [
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": f"""
+        Given the following new study partner request:
+        {new_request}
 
-    Please analyze the new request and find the best match from the available requests. Consider the following factors in order of importance:
+        And the current available requests:
+        {current_requests_formatted}
 
-        Shared courses
-        Similar major
-        Shared interests
-        Compatible study preferences
-        Overlapping availability
-        Similar year of study
+        Please analyze the new request and find the best match from the available requests. Consider the following factors in order of importance:
 
-    Provide your recommendation with a brief explanation of why this match is the best fit.
-    """
+            Shared courses
+            Similar major
+            Shared interests
+            Compatible study preferences
+            Overlapping availability
+            Similar year of study
 
-    response = openai.Completion.create(
-        model="text-davinci-003",
-        prompt=prompt,
-        max_tokens=150
+        Provide your recommendation with a brief explanation of why this match is the best fit.
+        """}
+    ]
+
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",  # Or use "gpt-4" if you have access to it
+        messages=messages
     )
 
-    return response.choices[0].text.strip()
+    return response.choices[0].message['content'].strip()
+
 
 @app.route('/find-match', methods=['POST'])
 def find_match():
