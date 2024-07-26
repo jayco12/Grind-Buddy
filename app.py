@@ -1,9 +1,10 @@
 from flask import Flask, request, jsonify
-import openai
+from openai import OpenAI
 import os
 
 app = Flask(__name__)
 openai.api_key = os.getenv('OPENAI_API_KEY')
+client = OpenAI()
 
 def find_best_match(new_request, current_requests):
     # Convert current_requests to a format suitable for the API
