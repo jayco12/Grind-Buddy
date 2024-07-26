@@ -12,6 +12,7 @@ def find_best_match(new_request, current_requests):
     Given the following new study partner request:
     {new_request}
 
+    
     And the current available requests:
     {current_requests}
 
