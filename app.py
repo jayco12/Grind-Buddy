@@ -1,44 +1,46 @@
 from flask import Flask, request, jsonify
 from openai import OpenAI
+import requests
 import os
 
 app = Flask(__name__)
-openai.api_key = os.getenv('OPENAI_API_KEY')
+claude_api_key = os.getenv('OPENAI_API_KEY')
 client = OpenAI()
 
 def find_best_match(new_request, current_requests):
-    # Convert current_requests to a format suitable for the API
-    current_requests_formatted = "\n".join(current_requests)
+    prompt = f"""
+    Given the following new study partner request:
+    {new_request}
 
-    messages = [
-        {"role": "system", "content": "You are a helpful assistant."},
-        {"role": "user", "content": f"""
-        Given the following new study partner request:
-        {new_request}
+    And the current available requests:
+    {current_requests}
 
-        And the current available requests:
-        {current_requests_formatted}
+    Please analyze the new request and find the best match from the available requests. Consider the following factors in order of importance:
 
-        Please analyze the new request and find the best match from the available requests. Consider the following factors in order of importance:
+        Shared courses
+        Similar major
+        Shared interests
+        Compatible study preferences
+        Overlapping availability
+        Similar year of study
 
-            Shared courses
-            Similar major
-            Shared interests
-            Compatible study preferences
-            Overlapping availability
-            Similar year of study
+    Provide your recommendation with a brief explanation of why this match is the best fit.
+    """
 
-        Provide your recommendation with a brief explanation of why this match is the best fit.
-        """}
-    ]
+    headers = {
+        'Authorization': f'Bearer {claude_api_key}',
+        'Content-Type': 'application/json',
+    }
 
-    response = client.chat.completions.create(
-        model="gpt-3.5-turbo",  # Or use "gpt-4" if you have access to it
-        messages=messages
-    )
+    data = {
+        'prompt': prompt,
+        'max_tokens_to_sample': 150,
+    }
 
-    return response.choices[0].message['content'].strip()
+    response = requests.post('https://api.anthropic.com/v1/complete', headers=headers, json=data)
+    response_data = response.json()
 
+    return response_data['completion'].strip()
 
 @app.route('/find-match', methods=['POST'])
 def find_match():
