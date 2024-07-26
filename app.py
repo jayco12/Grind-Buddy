@@ -1,9 +1,15 @@
 from flask import Flask, request, jsonify
+from pymongo import MongoClient
 import openai
 import os
 
 app = Flask(__name__)
 openai.api_key = os.getenv('OPENAI_API_KEY')
+
+client = MongoClient(os.getenv('MONGODI'))
+db = client['your_database']
+users_collection = db['users']
+
 def find_best_match(new_request, current_requests):
     prompt = f"""
     Given the following new study partner request:
@@ -36,11 +42,9 @@ def find_best_match(new_request, current_requests):
 def find_match():
     data = request.get_json()
     new_request = data['new_request']
-    current_requests = data['current_requests']
+    current_requests = list(users_collection.find())
     best_match = find_best_match(new_request, current_requests)
     return jsonify({'best_match': best_match})
 
-
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
+if __name__ == '__main__':
+    app.run(debug=True)
