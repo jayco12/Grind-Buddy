@@ -31,7 +31,7 @@ def find_best_match(new_request, current_requests):
         """}
     ]
 
-    response = openai.ChatCompletion.create(
+    response = client.chat.completions.create(
         model="gpt-3.5-turbo",  # Or use "gpt-4" if you have access to it
         messages=messages
     )
