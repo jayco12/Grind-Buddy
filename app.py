@@ -4,9 +4,12 @@ import openai
 import os
 
 app = Flask(__name__)
-openai.api_key = os.getenv('OPENAI_API_KEY')
 
-client = MongoClient(os.getenv('MONGODI'))
+# Ensure these environment variables are set
+openai.api_key = os.getenv('OPENAI_API_KEY')
+mongo_uri = os.getenv('MONGO')
+
+client = MongoClient(mongo_uri)
 db = client['your_database']
 users_collection = db['users']
 
@@ -40,11 +43,25 @@ def find_best_match(new_request, current_requests):
 
 @app.route('/find-match', methods=['POST'])
 def find_match():
-    data = request.get_json()
-    new_request = data['new_request']
-    current_requests = list(users_collection.find())
-    best_match = find_best_match(new_request, current_requests)
-    return jsonify({'best_match': best_match})
+    try:
+        data = request.get_json()
+        new_request = data.get('new_request')
+        
+        if not new_request:
+            return jsonify({'error': 'Missing new_request'}), 400
+        
+        # Fetch current requests and convert them to a list of strings
+        current_requests = [str(req) for req in users_collection.find()]
+        
+        # Ensure there are some current requests to match against
+        if not current_requests:
+            return jsonify({'error': 'No current requests available'}), 404
+        
+        best_match = find_best_match(new_request, current_requests)
+        return jsonify({'best_match': best_match})
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)
