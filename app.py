@@ -10,7 +10,7 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 mongo_uri = os.getenv('MONGO')
 
 client = MongoClient(mongo_uri)
-db = client['your_database']
+db = client['auth']
 users_collection = db['users']
 
 def find_best_match(new_request, current_requests):
