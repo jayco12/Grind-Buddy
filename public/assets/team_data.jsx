@@ -3,6 +3,7 @@ import joseph_headshot from './joseph_headshot.jpg'
 import yuvan_headshot from './yuvan_headshot.PNG'
 import sinmi_headshot from './sinmi_headshot.jpeg'
 import deborah_headshot from './deborah_headshot.jpg'
+import allyssa_headshot from './allyssa_headshot.png'
 
 const Team_Data = [
     {
@@ -32,7 +33,7 @@ const Team_Data = [
     {
         t_no:"05",
         t_name:"Allyssa",
-        t_pic: deborah_headshot,
+        t_pic: allyssa_headshot,
         t_desc:"Frontend Lead/ Project Manager"
     },
     {
