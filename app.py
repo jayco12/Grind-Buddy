@@ -41,8 +41,8 @@ def find_best_match(new_request, current_requests):
         max_tokens_to_sample=1500,
     )
 
-    # Extract and return the completion text
-    response_data = resp['completion']
+ 
+    response_data = resp
     return response_data.strip()
 
 if __name__ == '__main__':
