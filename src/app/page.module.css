@@ -1,9 +1,7 @@
+
+
 .main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
+  width: 100%;
 }
 
 .description {
@@ -107,6 +105,8 @@
 .logo {
   position: relative;
 }
+
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
@@ -127,19 +127,19 @@
 
 /* Mobile */
 @media (max-width: 700px) {
-  .content {
-    padding: 4rem;
+  .description {
+    font-size: 1.5rem;
   }
 
   .grid {
     grid-template-columns: 1fr;
-    margin-bottom: 120px;
+    margin-bottom: 60px;
     max-width: 320px;
     text-align: center;
   }
 
   .card {
-    padding: 1rem 2.5rem;
+    padding: 1rem 1.5rem;
   }
 
   .card h2 {
@@ -147,20 +147,16 @@
   }
 
   .center {
-    padding: 8rem 0 6rem;
+    padding: 6rem 0 4rem;
   }
 
   .center::before {
     transform: none;
-    height: 300px;
-  }
-
-  .description {
-    font-size: 0.8rem;
+    height: 200px;
   }
 
   .description a {
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
   .description p,
@@ -174,7 +170,7 @@
   .description p {
     align-items: center;
     inset: 0 0 auto;
-    padding: 2rem 1rem 1.4rem;
+    padding: 1rem 0.5rem 1.4rem;
     border-radius: 0;
     border: none;
     border-bottom: 1px solid rgba(var(--callout-border-rgb), 0.25);
@@ -192,7 +188,7 @@
     pointer-events: none;
     inset: auto 0 0;
     padding: 2rem;
-    height: 200px;
+    height: 150px;
     background: linear-gradient(
       to bottom,
       transparent 0%,
@@ -201,6 +197,7 @@
     z-index: 1;
   }
 }
+
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {

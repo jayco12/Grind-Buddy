@@ -4,7 +4,7 @@ import yuvan_headshot from './yuvan_headshot.PNG'
 import sinmi_headshot from './sinmi_headshot.jpeg'
 import deborah_headshot from './deborah_headshot.jpg'
 import allyssa_headshot from './allyssa_headshot.png'
-
+import mo_headshot from './mo.png'
 const Team_Data = [
     {
         t_no:"01",
@@ -39,7 +39,7 @@ const Team_Data = [
     {
         t_no:"06",
         t_name:"Muhammed Akbar",
-        t_pic: deborah_headshot,
+        t_pic: mo_headshot,
         t_desc:"Frontend Engineer"
     },
 ]
