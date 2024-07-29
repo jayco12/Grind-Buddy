@@ -1,5 +1,6 @@
 import React from 'react'
 import './About.css'
+import { useRouter } from 'next/router';
 import Image from 'next/image'
 import arrow_forward from '../../../public/assets/arrow_forward.png'
 import study from '../../../public/assets/study .png'
@@ -7,7 +8,11 @@ import bullet_icon from '../../../public/assets/bullet_icon.png'
 import purple_hue from '../../../public/assets/purple_hue.png'
 import blue_hue from '../../../public/assets/blue_hue.png'
 
+
 const About = () => {
+    const handleTryItClick = () => {
+        router.push('/search');
+      };
   return (
     <div className="about">
         <div className="design-element1">
@@ -37,7 +42,7 @@ const About = () => {
             </div>
         </div>
         <div className="about-action">
-            <div className="about-form">TRY IT
+            <div className="about-form" onClick={handleTryItClick}>TRY IT
                 <Image src={arrow_forward} alt=""/> 
             </div>
         </div>
