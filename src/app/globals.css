@@ -81,7 +81,7 @@
 
 html,
 body {
-  max-width: 100vw;
+  max-width: 100%;
   overflow-x: hidden;
 }
 
@@ -93,9 +93,9 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-    padding: 10px;
-    
+  padding: 10px;
 }
+
 .container {
   background-color: rebeccapurple;
   margin: auto;
@@ -105,7 +105,3 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
-
-
-

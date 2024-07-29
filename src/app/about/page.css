@@ -127,6 +127,7 @@
 
     .about-us-format{
         gap: 10px;
+        width: 200px;
         padding: 20px;
     }
 
@@ -141,6 +142,7 @@
     
     .about-us-container{
         grid-template-columns: 1fr 1fr;
+        width: 400px;
         gap: 20px;
     }
 }

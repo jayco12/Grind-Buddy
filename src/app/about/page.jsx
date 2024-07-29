@@ -28,7 +28,7 @@ const AboutPage = () => {
              <h3>{team.t_no}</h3>
              <h2>{team.t_name}</h2>
              <div className='team-pic'>
-                <Image src={team.t_pic} alt={team.t_name} width={200} height={200} />
+                <Image src={team.t_pic} alt={team.t_name} width={150} height={150} />
               </div>
              <div className='about-us-readmore'>
               <p>{team.t_desc}</p>
