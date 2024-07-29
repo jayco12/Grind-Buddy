@@ -45,7 +45,7 @@ const About = () => {
             </div>
             <div className="about-action">
             <Link href="/search">
-                <div className="about-form" onClick={handleTryItClick}>
+                <div className="about-form" >
                     TRY IT
                     <Image src={arrow_forward} alt="Arrow Forward" width={20} height={20} />
                 </div>
