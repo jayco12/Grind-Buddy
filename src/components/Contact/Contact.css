@@ -105,7 +105,7 @@
 @media(max-width:768px) {
     .contact {
         gap: 50px;
-        margin: 50px 70px;
+        margin: 50px 0px;
     }
 
     .contact-left {

@@ -110,7 +110,7 @@
 }
 @media(max-width:830px){
     .about-us {
-        gap: 70px;
+        gap: 60px;
     }
 
     .about-us-intro h1{
@@ -127,8 +127,8 @@
 
     .about-us-format{
         gap: 10px;
-        width: 200px;
-        padding: 20px;
+        width: 190px;
+        padding: 18px;
     }
 
     .about-us-format h2{
@@ -142,7 +142,7 @@
     
     .about-us-container{
         grid-template-columns: 1fr 1fr;
-        width: 400px;
-        gap: 20px;
+        width: 380px;
+        gap: 8px;
     }
 }

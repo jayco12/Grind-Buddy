@@ -1,9 +1,12 @@
 .links {
     display: flex;
     align-items: center;
+    gap: 5px;
+    padding: 5px;
     color:rebeccapurple
     
   }
+
   .box{
     border-radius: 20px;
     background: linear-gradient(264deg, #77DDCB -5.09%, #9EFBB8 106.28%);
@@ -31,11 +34,15 @@
   }
   
   @media (max-width: 768px) {
-    .links {
-      display: flex;
-    align-items: center;
-    margin-left: 2px;
-    }
+      .links {
+        display: flex;
+        gap: 5px;
+    padding: 5px;
+        align-items: center;
+        color:rebeccapurple
+        
+      }
+    
   
     .menuButton {
       display: block;
