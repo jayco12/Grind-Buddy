@@ -4,7 +4,7 @@ import yuvan_headshot from './yuvan_headshot.PNG'
 import sinmi_headshot from './sinmi_headshot.jpeg'
 import deborah_headshot from './deborah_headshot.jpg'
 import allyssa_headshot from './allyssa_headshot.png'
-import mo_headshot from './mo.png'
+import mo_headshot from './mo_headshot.jpeg'
 const Team_Data = [
     {
         t_no:"01",
