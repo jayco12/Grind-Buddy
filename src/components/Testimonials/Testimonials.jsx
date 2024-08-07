@@ -6,19 +6,19 @@ const testimonials = [
     {
       name: "Eva Sawyer",
       job: "CEO, Fashworks",
-      image: "/assets/profile-image-1.png",
+      // image: "/assets/profile-image-1.png",
       testimonial: "Grind Buddy has revolutionized the way I study. Finding a compatible study partner nearby or virtually has never been easier. The app's seamless matching system ensures I always have the right study buddy to keep me motivated and productive.",
     },
     {
       name: "Katey Topaz",
       job: "Developer, TechCrew",
-      image: "/assets/profile-image-2.png",
+      // image: "/assets/profile-image-2.png",
       testimonial: "Grind Buddy has revolutionized the way I study. Finding a compatible study partner nearby or virtually has never been easier. The app's seamless matching system ensures I always have the right study buddy to keep me motivated and productive.",
     },
     {
       name: "Jae Robin",
       job: "UI Designer, Affinity Agency",
-      image: "/assets/profile-image-3.png",
+      // image: "/assets/profile-image-3.png",
       testimonial: "Grind Buddy has revolutionized the way I study. Finding a compatible study partner nearby or virtually has never been easier. The app's seamless matching system ensures I always have the right study buddy to keep me motivated and productive.",
     },
    
@@ -43,7 +43,7 @@ const testimonials = [
         <div className="testimonials-sections">
             <div className="wrapper">
                 <div className="testimonial-container" id="testimonial-container">
-                    <img src={image} alt={name} />
+                    {/* <img src={image} alt={name} /> */}
                     <h3>{name}</h3>
                     <p>{testimonial}</p>
                     <h6>{job}</h6>

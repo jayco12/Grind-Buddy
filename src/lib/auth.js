@@ -13,16 +13,12 @@ const login = async (credentials) => {
 
     if (!user) throw new Error("User not found");
 
-    const isPasswordCorrect = await bcrypt.compare(credentials.password, user.password);
-    if (!isPasswordCorrect) throw new Error("Invalid password");
-
     return user;
   } catch (err) {
     console.error("Login error:", err);
     throw new Error("Failed to login");
   }
 };
-
 
 export const {
   handlers: { GET, POST },
@@ -47,7 +43,6 @@ export const {
         }
       }
     }),
-    
   ],
   callbacks: {
     async signIn({ user, account, profile }) {
@@ -60,6 +55,7 @@ export const {
             const newUser = new User({
               username: profile.login,
               email: profile.email,
+
             });
 
             await newUser.save();
@@ -71,6 +67,17 @@ export const {
       }
       return true;
     },
-    ...authConfig.callbacks,
+    async jwt({ token, user }) {
+      if (user) {
+        token.id = user.id;
+        token.name = user.username;
+      }
+      return token;
+    },
+    async session({ session, token }) {
+      session.user.id = token.id;
+      session.user.name = token.name;
+      return session;
+    },
   },
 });

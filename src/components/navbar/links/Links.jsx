@@ -46,7 +46,7 @@ const Links = ({session}) => {
           </>
         ) : (
           <div className={styles.box}>
-          <NavLink item={{ title: "Try It", path: "/search" }} />
+          <NavLink item={{ title: "Try It", path: "/login" }} />
        </div>
         )}
       </div>

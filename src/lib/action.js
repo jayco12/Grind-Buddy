@@ -8,18 +8,29 @@ import bcrypt from "bcryptjs";
 // import { toast } from 'react-toastify';
 
 export const addUser = async (prevState,formData) => {
-  const { username,school, hobbies,about, email, password, img } = Object.fromEntries(formData);
+  const {  
+    username,
+    email,
+    password,
+    availability,
+    interests,
+    major,
+    shared_courses,
+    study_preferences,
+    year_of_study, } = Object.fromEntries(formData);
 
   try {
     connectToDb();
     const newUser = new User({
       username,
-      school,
-      hobbies,
-      about,
       email,
       password,
-      img,
+      availability,
+      interests,
+      major,
+      shared_courses,
+      study_preferences,
+      year_of_study,
     });
 
     await newUser.save();
@@ -59,9 +70,18 @@ export const handleLogout = async () => {
 export const register = async (previousState, formData) => {
   const formDataObject = Object.fromEntries(formData);
 
-  console.log("Form Data:", formDataObject);
-  const { username,school, hobbies,about, email, password, img, passwordRepeat } =formDataObject;
-
+  const {
+    username,
+    email,
+    password,
+    availability,
+    interests,
+    major,
+    shared_courses,
+    study_preferences,
+    year_of_study,
+    passwordRepeat,
+  } = formDataObject;
 
   if (password !== passwordRepeat) {
     return { error: "Passwords do not match" };
@@ -70,9 +90,9 @@ export const register = async (previousState, formData) => {
   try {
     connectToDb();
 
-    const user = await User.findOne({ username });
+    const existingUser = await User.findOne({ username });
 
-    if (user) {
+    if (existingUser) {
       return { error: "Username already exists" };
     }
 
@@ -81,12 +101,14 @@ export const register = async (previousState, formData) => {
 
     const newUser = new User({
       username,
-      school,
-      hobbies,
-      about, 
       email,
-      password: hashedPassword,
-      img,
+      password,
+      availability,
+      interests,
+      major,
+      shared_courses,
+      study_preferences,
+      year_of_study,
     });
 
     await newUser.save();
@@ -100,16 +122,21 @@ export const register = async (previousState, formData) => {
 };
 
 export const login = async (prevState, formData) => {
-  const { username, password } = Object.fromEntries(formData);
+  const { username } = Object.fromEntries(formData);
 
   try {
-    await signIn("credentials", { username, password, callbackUrl:"/search" });
-    // toast.success(`Login successful`);
+    const result =await signIn("credentials", { username });
+    if (result.error) {
+      setError(result.error);
+    } else {
+      // Redirect to /search on success
+      window.location.href = '/search';
+    }
   } catch (err) {
     console.log(err);
 
     if (err.message.includes("CredentialsSignin")) {
-      return { error: "Invalid username or password" };
+      return { error: "Invalid username " };
     }
     throw err;
   }

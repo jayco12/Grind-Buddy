@@ -1,3 +1,4 @@
+import { NextResponse } from "next/server";
 export const authConfig = {
     pages: {
       signIn: "/login",
@@ -19,12 +20,13 @@ export const authConfig = {
 
       },
       async redirect({url,baseUrl}) {
-      if(url =='/login'){
-        return `${baseUrl}/search`;
+        if (url.startsWith(baseUrl)){
+        return url;
       }
       return baseUrl;
 
     },
+ 
       authorized({ auth, request }) {
         const user = auth?.user;
         const isOnLoginPage = request.nextUrl?.pathname.startsWith("/login");
@@ -33,7 +35,7 @@ export const authConfig = {
   
    
         if (isOnLoginPage && user) {
-          return Response.redirect(new URL("/login", request.nextUrl));
+          return Response.redirect(new URL("/search", request.nextUrl));
         }
   
         return true

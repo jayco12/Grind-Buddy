@@ -18,18 +18,16 @@ const RegisterForm = () => {
 
   return (
     <form className={styles.form} action={formAction}>
-      <input type="text" placeholder="username" name="username" />
-      <input type="school" placeholder="What School" name="school" />
-      <input type="hobbies" placeholder="hobbies" name="hobbies" />
-      <input type="about" placeholder="Let your buddy get to know you" name="about" />
-      <input type="email" placeholder="email" name="email" />
-  
-      <input type="password" placeholder="password" name="password" />
-      <input
-        type="password"
-        placeholder="password again"
-        name="passwordRepeat"
-      />
+      <input type="text" placeholder="Username" name="username" required />
+      <input type="email" placeholder="Email" name="email" required />
+      <input type="password" placeholder="Password" name="password" required />
+      <input type="password" placeholder="Password Again" name="passwordRepeat" required />
+      <input type="text" placeholder="Availability" name="availability" required />
+      <input type="text" placeholder="Interests" name="interests" required />
+      <input type="text" placeholder="Major" name="major" required />
+      <input type="text" placeholder="Shared Courses" name="shared_courses" required />
+      <input type="text" placeholder="Study Preferences" name="study_preferences" required />
+      <input type="text" placeholder="Year of Study" name="year_of_study" required />
       <button>Register</button>
       {state?.error}
       <Link href="/login">
