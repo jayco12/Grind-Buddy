@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import styles from "./search.module.css";
+import { useSession } from "next-auth/react";
+
 
 const SearchPage = () => {
   const [newRequest, setNewRequest] = useState({
@@ -22,6 +24,7 @@ const SearchPage = () => {
   const [currentRequests, setCurrentRequests] = useState([]);
   const [bestMatch, setBestMatch] = useState(null);
   const [loading, setLoading] = useState(false);  // Loading state
+const { data: session, status } = useSession();
 
   useEffect(() => {
     // Fetch initial requests here if needed
@@ -85,6 +88,7 @@ const SearchPage = () => {
   return (
     <div className={styles.form}>
       <form className={styles.inputContainer} onSubmit={handleTestAI}>
+      {session && <h1>Welcome, {session.user.name}!</h1>}
         {Object.keys(newRequest).map((field, index) => {
           if (field === 'major') {
             return (

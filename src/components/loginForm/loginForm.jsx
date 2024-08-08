@@ -9,10 +9,10 @@ import Link from "next/link";
 
 const LoginForm = () => {
   const [state, formAction] = useFormState(login, undefined);
-  // const router = useRouter();
-  // useEffect(() => {
-  //   state?.success && router.push("/");
-  // }, [state?.success, router]);
+  const router = useRouter();
+  useEffect(() => {
+    state?.success && router.push("/search");
+  }, [state?.success, router]);
   return (
     <form className={styles.form} action={formAction}>
       <input type="text" placeholder="username" name="username" />

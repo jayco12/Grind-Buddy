@@ -122,22 +122,22 @@ export const register = async (previousState, formData) => {
 };
 
 export const login = async (prevState, formData) => {
+  
   const { username } = Object.fromEntries(formData);
 
   try {
-    const result =await signIn("credentials", { username });
+    const result =await signIn("credentials", { redirect: false, username});
     if (result.error) {
-      setError(result.error);
+      return { error: result.error };
     } else {
-      // Redirect to /search on success
-      window.location.href = '/search';
+      return { success: true };
     }
   } catch (err) {
     console.log(err);
-
     if (err.message.includes("CredentialsSignin")) {
-      return { error: "Invalid username " };
+      return { error: "Invalid username or password" };
     }
-    throw err;
+    return { error: "Something went wrong!" };
+  
   }
 };
