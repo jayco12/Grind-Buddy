@@ -17,7 +17,7 @@ const SearchPage = () => {
     year_of_study: ''
   });
 
-  const [majors] = useState(['Computer Science', 'Engineering,SAT,art, USMLE']);
+  const [majors] = useState(['Computer Science', 'Engineering', 'SAT','art', 'USMLE']);
   const [studyPreferences] = useState(['morning', 'afternoon', 'evening', 'one-on-one', 'virtual']);
   const [yearOfStudy] = useState(['1', '2', '3', '4']);
 
