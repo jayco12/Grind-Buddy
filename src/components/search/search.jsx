@@ -17,7 +17,7 @@ const SearchPage = () => {
     year_of_study: ''
   });
 
-  const [majors] = useState(['Computer Science', 'Engineering']);
+  const [majors] = useState(['Computer Science', 'Engineering,SAT,art, USMLE']);
   const [studyPreferences] = useState(['morning', 'afternoon', 'evening', 'one-on-one', 'virtual']);
   const [yearOfStudy] = useState(['1', '2', '3', '4']);
 
@@ -53,7 +53,7 @@ const { data: session, status } = useSession();
       setBestMatch(response.data.best_match);
     } catch (error) {
       console.error("Error finding match:", error);
-      setBestMatch("An error occurred while finding a match. Please try again.");
+      setBestMatch("Hey, I couldn't seem to get an exact macth for you😔. Try to provide more information");
     }
       // const matches = response.data.matches || [];
     //   if (matches.length > 0) {
@@ -68,7 +68,7 @@ const { data: session, status } = useSession();
     //   console.error("Error finding match:", error);
     //   setBestMatch("An error occurred while finding a match. Please try again.");
       finally {
-      setLoading(false);  // Stop loading
+      setLoading(false); 
     }
   };
 
@@ -165,6 +165,9 @@ const { data: session, status } = useSession();
         {bestMatch && (
           <div className={styles.result}>
             <pre>{JSON.stringify(bestMatch, null, 2)}</pre>
+             {/* <a href={`mailto:${bestMatch.email}`} className={styles.emailButton}>
+               Email Match
+             </a> */}
           </div>
         )}
       </div>
